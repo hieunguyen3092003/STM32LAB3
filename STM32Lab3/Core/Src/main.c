@@ -97,7 +97,6 @@ int main(void)
 		  HAL_GPIO_TogglePin(RED_LED_GPIO_Port, RED_LED_Pin);
 	  }
 	  else{
-
 	  }
     /* USER CODE END WHILE */
 
