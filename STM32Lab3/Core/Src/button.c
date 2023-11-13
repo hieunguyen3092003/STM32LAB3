@@ -46,7 +46,7 @@ void getKeyInput()  //goi = timer moi 10ms 1 lan
 				timer_for_key_press = 200; // gán lại lên 2s
 			}
 		}
-		else // xử lý nhấn đè
+		else // xử lý nhấn đè (key_reg3 == key_reg2)
 		{
 			timer_for_key_press--;
 			if(timer_for_key_press == 0)
