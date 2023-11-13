@@ -1,0 +1,3 @@
+button.c:19:5:isButton1Pressed	4	static
+button.c:28:6:flagProcess	4	static
+button.c:33:6:getKeyInput	8	static
