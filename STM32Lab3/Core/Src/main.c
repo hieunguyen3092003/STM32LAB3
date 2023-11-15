@@ -29,6 +29,7 @@
 #include "softwareTimer.h"
 #include "FSMNormalMode.h"
 #include "FSMModificationMode.h"
+#include "FSMLightModification.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,6 +112,7 @@ int main(void)
 
 	  FSMNormalModeRun();
 	  FSMModificationModeRun();
+	  FSMLightModification();
 
     /* USER CODE END WHILE */
 

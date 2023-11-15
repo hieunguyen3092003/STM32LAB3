@@ -22,4 +22,8 @@ int timer3_counter;
 extern int timer3_flag;
 void setTimer3();
 
+int timer4_counter;
+extern int timer4_flag;
+void setTimer4();
+
 #endif /* INC_SOFTWARETIMER_H_ */

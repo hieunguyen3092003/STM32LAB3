@@ -6,6 +6,8 @@
  */
 #include "global.h"
 
+int count = 0;
+
 int status = 0;
 int red_time = 5;
 int green_time = 3;

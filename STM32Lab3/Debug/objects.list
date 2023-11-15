@@ -1,4 +1,5 @@
 "./Core/Src/FSMAutomatic.o"
+"./Core/Src/FSMLightModification.o"
 "./Core/Src/FSMManual.o"
 "./Core/Src/FSMModificationMode.o"
 "./Core/Src/FSMNormalMode.o"

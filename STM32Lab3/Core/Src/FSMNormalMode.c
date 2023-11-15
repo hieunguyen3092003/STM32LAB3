@@ -7,7 +7,7 @@
 
 #include "FSMNormalMode.h"
 
-int count = 0;
+
 
 void FSMNormalModeRun()
 {
@@ -15,6 +15,7 @@ void FSMNormalModeRun()
 	{
 	case NORMAL_MODE:
 		HAL_GPIO_WritePin(GPIOA, RED_LED_Pin|GREEN_LED_Pin|YELLOW_LED_Pin|RED_LED1_Pin|GREEN_LED1_Pin|YELLOW_LED1_Pin, SET);
+		count = 0;
 
 		status = RED0_GREEN1;
 		setTimer1(green_time);
@@ -25,6 +26,8 @@ void FSMNormalModeRun()
 		setTimer3(100); // 1s sau update led_buffer
 
 		isButton1Pressed(); // delete button1_flag
+		isButton2Pressed();
+		isButton3Pressed();
 		break;
 
 	case RED0_GREEN1:
