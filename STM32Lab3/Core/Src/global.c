@@ -115,3 +115,22 @@ void sevenSegDisplay(int num)
 	}
 }
 
+void resetInitialState()
+{
+	count = 0;
+	HAL_GPIO_WritePin(GPIOA, RED_LED1_Pin|GREEN_LED1_Pin|YELLOW_LED1_Pin|RED_LED_Pin
+	                          |GREEN_LED_Pin|YELLOW_LED_Pin|EN0_Pin|EN1_Pin
+	                          |EN2_Pin|EN3_Pin, SET);
+	HAL_GPIO_WritePin(GPIOB, A_LED_Pin|B_LED_Pin|C_LED_Pin|D_LED_Pin
+	                          |E_LED_Pin|F_LED_Pin|G_LED_Pin, SET);
+
+	timer1_flag = 0;
+	timer2_flag = 0;
+	timer3_flag = 0;
+	timer4_flag = 0;
+
+	isButton1Pressed(); // delete all button_flag
+	isButton2Pressed();
+	isButton3Pressed();
+}
+

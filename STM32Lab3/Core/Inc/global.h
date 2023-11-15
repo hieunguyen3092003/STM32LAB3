@@ -62,4 +62,6 @@ void updateLedBuffer();
 void scanSevenSeg(int number);
 void sevenSegDisplay();
 
+
+void resetInitialState();
 #endif /* INC_GLOBAL_H_ */

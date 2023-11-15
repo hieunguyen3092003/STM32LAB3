@@ -9,7 +9,7 @@
 
 int timer1_counter = 0;
 int timer1_flag = 0;
-// counter for trafic light (already divide for 100)
+// counter for trafic light (already multiple for 100)
 void setTimer1(int duration)
 {
 	timer1_counter = duration*100;

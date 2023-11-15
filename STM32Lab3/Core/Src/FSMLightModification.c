@@ -32,29 +32,20 @@ void FSMLightModification()
 
 		if(isButton2Pressed() == 1)
 		{
+			resetInitialState();
+
 			red_time++;
 			setLedBuffer(red_time, 1);
-			count = 0;					// reset quét led
 		}
 
 		if(isButton3Pressed() == 1)
 		{
-			HAL_GPIO_WritePin(GPIOA, RED_LED1_Pin|GREEN_LED1_Pin|YELLOW_LED1_Pin|RED_LED_Pin
-			                          |GREEN_LED_Pin|YELLOW_LED_Pin|EN0_Pin|EN1_Pin
-			                          |EN2_Pin|EN3_Pin, SET);
-			HAL_GPIO_WritePin(GPIOB, A_LED_Pin|B_LED_Pin|C_LED_Pin|D_LED_Pin
-			                          |E_LED_Pin|F_LED_Pin|G_LED_Pin, SET);
-			status = MODIFY_YELLOW;
+			resetInitialState();
 
-			isButton1Pressed(); // reset button1_flag
-			isButton2Pressed();
-			isButton3Pressed();
-
-			count = 0;
-			setLedBuffer(0, 2);
+			status = MODIFY_YELLOW;	//next mode
 			setTimer4(25);
-			setTimer2(scan_led_time);
-			timer2_flag = 1; // ngay lap tuc chay led 7 doan
+
+			setLedBuffer(0, 2);
 		}
 		break;
 
@@ -79,29 +70,20 @@ void FSMLightModification()
 
 		if(isButton2Pressed() == 1)
 		{
+			resetInitialState();
+
 			yellow_time++;
 			setLedBuffer(yellow_time, 2);
-			count = 0;					// reset quét led
 		}
 
 		if(isButton3Pressed() == 1)
 		{
-			HAL_GPIO_WritePin(GPIOA, RED_LED1_Pin|GREEN_LED1_Pin|YELLOW_LED1_Pin|RED_LED_Pin
-			                          |GREEN_LED_Pin|YELLOW_LED_Pin|EN0_Pin|EN1_Pin
-			                          |EN2_Pin|EN3_Pin, SET);
-			HAL_GPIO_WritePin(GPIOB, A_LED_Pin|B_LED_Pin|C_LED_Pin|D_LED_Pin
-			                          |E_LED_Pin|F_LED_Pin|G_LED_Pin, SET);
-			status = MODIFY_GREEN;
+			resetInitialState();
 
-			isButton1Pressed(); // reset button1_flag
-			isButton2Pressed();
-			isButton3Pressed();
-
-			count = 0;
-			setLedBuffer(0, 3);
+			status = MODIFY_GREEN;	//next mode
 			setTimer4(25);
-			setTimer2(scan_led_time);
-			timer2_flag = 1; // ngay lap tuc chay led 7 doan
+
+			setLedBuffer(0, 3);
 		}
 		break;
 
@@ -109,6 +91,7 @@ void FSMLightModification()
 		if(timer4_flag == 1)
 		{
 			setTimer4(25);
+
 			HAL_GPIO_TogglePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin);
 			HAL_GPIO_TogglePin(GREEN_LED1_GPIO_Port, GREEN_LED1_Pin);
 		}
@@ -126,9 +109,10 @@ void FSMLightModification()
 
 		if(isButton2Pressed() == 1)
 		{
-			yellow_time++;
-			setLedBuffer(yellow_time, 2);
-			count = 0;					// reset quét led
+			resetInitialState();
+
+			green_time++;
+			setLedBuffer(green_time, 3);
 		}
 
 		if(isButton3Pressed() == 1)

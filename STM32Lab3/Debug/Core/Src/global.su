@@ -7,3 +7,4 @@ global.c:48:6:setTrafficYellow1	8	static
 global.c:58:6:setLedBuffer	16	static
 global.c:66:6:updateLedBuffer	4	static
 global.c:90:6:sevenSegDisplay	48	static
+global.c:118:6:resetInitialState	8	static
