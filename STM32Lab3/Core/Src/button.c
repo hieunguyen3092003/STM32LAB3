@@ -56,4 +56,3 @@ void getKeyInput()  //goi = timer moi 10ms 1 lan
 		}
 	}
 }
-

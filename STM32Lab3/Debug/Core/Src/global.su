@@ -1,0 +1,9 @@
+global.c:15:6:setTrafficRed	8	static
+global.c:21:6:setTrafficGreen	8	static
+global.c:27:6:setTrafficYellow	8	static
+global.c:34:6:setTrafficRed1	8	static
+global.c:40:6:setTrafficGreen1	8	static
+global.c:46:6:setTrafficYellow1	8	static
+global.c:56:6:setLedBuffer	16	static
+global.c:64:6:updateLedBuffer	4	static
+global.c:88:6:sevenSegDisplay	48	static

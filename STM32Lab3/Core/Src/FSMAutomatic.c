@@ -16,41 +16,53 @@ void FSMAutomaticRun() // 1 trạng thái chỉ có 2 phần 1 là todo 2 là ch
 
 		status = AUTO_RED;
 		setTimer1(500); //set timer for AUTO_RED state
+		isButton1Pressed(); // xóa cờ của nút nhấn
 		break;
 	case AUTO_RED:
 		//TODO
-		HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, RESET);
-		HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, SET);
-		HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, SET);
+		setTrafficRed();
 
 		if(timer1_flag == 1)
 		{
 			status = AUTO_GREEN;
 			setTimer1(300);
 		}
+
+		if(isButton1Pressed()==1)
+		{
+			status = MAN_RED;
+			setTimer1(1000);
+		}
 		break;
 	case AUTO_GREEN:
 		//TODO
-		HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, SET);
-		HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, SET);
-		HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, RESET);
-
+		setTrafficGreen();
 
 		if(timer1_flag == 1)
 		{
 			status = AUTO_YELLOW;
 			setTimer1(200);
 		}
+
+		if(isButton1Pressed()==1)
+		{
+			status = MAN_GREEN;
+			setTimer1(1000);
+		}
 		break;
 	case AUTO_YELLOW:
 		//TODO
-		HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, SET);
-		HAL_GPIO_WritePin(YELLOW_LED_GPIO_Port, YELLOW_LED_Pin, RESET);
-		HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, SET);
+		setTrafficYellow();
 
 		if(timer1_flag == 1){
 			status = AUTO_RED;
 			setTimer1(500);
+		}
+
+		if(isButton1Pressed()==1)
+		{
+			status = MAN_YELLOW;
+			setTimer1(1000);
 		}
 		break;
 	default:

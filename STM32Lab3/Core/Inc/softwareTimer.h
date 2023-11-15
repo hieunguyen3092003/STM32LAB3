@@ -10,8 +10,16 @@
 
 int timer1_counter;
 extern int timer1_flag;
-
 void setTimer1();
+
 void timerRun();
+
+int timer2_counter;
+extern int timer2_flag;
+void setTimer2();
+
+int timer3_counter;
+extern int timer3_flag;
+void setTimer3();
 
 #endif /* INC_SOFTWARETIMER_H_ */

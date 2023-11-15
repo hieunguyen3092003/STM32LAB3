@@ -1,4 +1,7 @@
 "./Core/Src/FSMAutomatic.o"
+"./Core/Src/FSMManual.o"
+"./Core/Src/FSMModificationMode.o"
+"./Core/Src/FSMNormalMode.o"
 "./Core/Src/button.o"
 "./Core/Src/global.o"
 "./Core/Src/main.o"
