@@ -24,8 +24,8 @@
 /* USER CODE BEGIN Includes */
 #include "button.h"
 #include "global.h"
-#include "FSMAutomatic.h"
-#include "FSMManual.h"
+//#include "FSMAutomatic.h"
+//#include "FSMManual.h"
 #include "softwareTimer.h"
 #include "FSMNormalMode.h"
 #include "FSMModificationMode.h"
@@ -106,9 +106,6 @@ int main(void)
 
   while (1)
   {
-//	  FSMAutomaticRun();
-//	  FSMManualRun();
-
 
 	  FSMNormalModeRun();
 	  FSMModificationModeRun();
